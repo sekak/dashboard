@@ -16,9 +16,8 @@ import { SidebarTrigger } from './ui/sidebar'
 function Navbar() {
   return (
     <nav className="flex items-center justify-between p-4">
-        collapseButton
+          <SidebarTrigger />
         <div className='flex items-center gap-4'>
-            <SidebarTrigger />z
             <Link href="/">Dashboard</Link>
             <ModeToggle />
             <DropdownMenu>      

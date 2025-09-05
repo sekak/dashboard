@@ -42,7 +42,7 @@ export default async function RootLayout({
             <SideBar />
             <main className="flex w-full flex-col">
               <Navbar />
-              <div className="p-4">
+              <div className="px-4">
                 {children}
               </div>
             </main>

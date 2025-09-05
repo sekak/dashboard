@@ -33,9 +33,9 @@ export function Chart() {
           <CartesianGrid vertical={false} />
           <XAxis
             dataKey="month"
-            tickLine={true}
-            tickMargin={20}
-            axisLine={true}
+            tickLine={false}
+            tickMargin={10}
+            axisLine={false}
             tickFormatter={(value) => value.slice(0, 3)}
           />
           <YAxis tickLine={false} tickMargin={10} axisLine={false} />

@@ -37,9 +37,8 @@ const items = [
 function SideBar() {
   return (
     <Sidebar variant="sidebar" collapsible="icon">
-      <SidebarContent>
-
-        <SidebarHeader>
+      <SidebarContent >
+        <SidebarHeader className='py-4'>
           <SidebarMenu>
             <SidebarMenuItem className='flex items-start justify-end'>
               <SidebarMenuButton asChild>
@@ -53,7 +52,7 @@ function SideBar() {
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarHeader>
-        <SidebarSeparator />
+        <SidebarSeparator className='gap-0'/>
 
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
