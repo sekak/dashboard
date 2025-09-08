@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
+import { Card, CardContent, CardFooter, CardTitle } from './ui/card';
 import { Avatar } from '@radix-ui/react-avatar';
 import { AvatarImage } from './ui/avatar';
 import { Badge } from './ui/badge';

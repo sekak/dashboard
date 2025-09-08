@@ -1,11 +1,11 @@
+import Badges from '@/components/Badges'
 import CardList from '@/components/CardList'
 import { EditUser } from '@/components/EditUser'
+import { ChartLineMultiple } from '@/components/ChartLineMultiple'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
-import { HoverCardContent, HoverCardTrigger, HoverCard } from '@/components/ui/hover-card'
 import { Progress } from '@/components/ui/progress'
-import { BadgeCheck, Candy, Citrus, Shield } from 'lucide-react'
-import React from 'react'
 
 function SingleUser() {
     return (
@@ -30,65 +30,7 @@ function SingleUser() {
                 <div className='flex flex-col gap-8 w-full xl:w-1/3'>
                     <div className='bg-primary-foreground p-4 rounded-lg'>
                         <h1 className="mb-4 font-medium text-md">Badges</h1>
-                        <div className='flex gap-4'>
-                            <HoverCard>
-                                <HoverCardTrigger>
-                                    <BadgeCheck
-                                        size={36}
-                                        className="rounded-full bg-blue-500/30 border-1 border-blue-500/50 p-2"
-                                    />
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <h1 className="font-bold mb-2">Verified User</h1>
-                                    <p className="text-sm text-muted-foreground">
-                                        This user has been verified by the admin.
-                                    </p>
-                                </HoverCardContent>
-                            </HoverCard>
-                            <HoverCard>
-                                <HoverCardTrigger>
-                                    <Shield
-                                        size={36}
-                                        className="rounded-full bg-green-800/30 border-1 border-green-800/50 p-2"
-                                    />
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <h1 className="font-bold mb-2">Admin</h1>
-                                    <p className="text-sm text-muted-foreground">
-                                        Admin users have access to all features and can manage
-                                        users.
-                                    </p>
-                                </HoverCardContent>
-                            </HoverCard>
-                            <HoverCard>
-                                <HoverCardTrigger>
-                                    <Candy
-                                        size={36}
-                                        className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"
-                                    />
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <h1 className="font-bold mb-2">Awarded</h1>
-                                    <p className="text-sm text-muted-foreground">
-                                        This user has been awarded for their contributions.
-                                    </p>
-                                </HoverCardContent>
-                            </HoverCard>
-                            <HoverCard>
-                                <HoverCardTrigger>
-                                    <Citrus
-                                        size={36}
-                                        className="rounded-full bg-orange-500/30 border-1 border-orange-500/50 p-2"
-                                    />
-                                </HoverCardTrigger>
-                                <HoverCardContent>
-                                    <h1 className="font-bold mb-2">Popular</h1>
-                                    <p className="text-sm text-muted-foreground">
-                                        This user has been popular in the community.
-                                    </p>
-                                </HoverCardContent>
-                            </HoverCard>
-                        </div>
+                        <Badges />
                     </div>
 
                     <div className='bg-primary-foreground p-4 rounded-lg flex flex-col gap-4'>
@@ -113,11 +55,11 @@ function SingleUser() {
                                 <span className='font-bold'>Location:</span>
                                 <span className='text-sm text-muted-foreground'>New York, USA</span>
                             </div>
-                             <div className='flex items-center gap-2'>
+                            <div className='flex items-center gap-2'>
                                 <span className='font-bold'>Phone:</span>
                                 <span className='text-sm text-muted-foreground'>+1 (555) 123-4567</span>
                             </div>
-                             <div className='flex items-center gap-2'>
+                            <div className='flex items-center gap-2'>
                                 <span className='font-bold'>Role:</span>
                                 <Badge>Admin</Badge>
                             </div>
@@ -129,8 +71,20 @@ function SingleUser() {
                 </div>
 
                 <div className='flex flex-col gap-8 w-full xl:w-2/3 '>
-                    <div className='bg-amber-300'>user</div>
-                    <div className='bg-amber-300'>chart</div>
+                    <div className='bg-primary-foreground p-4 rounded-lg'>
+                        <div className='flex items-center gap-2 p-4'>
+                            <Avatar className='h-12 w-12'>
+                                <AvatarImage src="https://github.com/shadcn.png" alt="User Avatar" />
+                                <AvatarFallback>Med Sekk</AvatarFallback>
+                            </Avatar>
+                            <span className='font-bold'>Med Sekak</span>
+                        </div>
+                        <p className='text-sm px-4 text-muted-foreground'>Med Sekak is a software engineer with a passion for building user-friendly applications.</p>
+                    </div>
+                    <div className='bg-primary-foreground p-4 rounded-lg'>
+                        <h1 className="font-medium text-md mb-4">User Activity</h1>
+                        <ChartLineMultiple />
+                    </div>
                 </div>
 
             </div>
